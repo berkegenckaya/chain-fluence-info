@@ -49,7 +49,7 @@ export default function ContactUs(){
         setName('')
         setSurname('')
         setEmail('')
-        setBody('')
+        setMessage('')
       
       
     })
