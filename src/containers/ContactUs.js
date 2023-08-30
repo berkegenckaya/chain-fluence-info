@@ -7,7 +7,7 @@ const orb4 = Orbitron({ weight: "400", subsets: ["latin"] });
 const outfit = Outfit({ weight: "600", subsets: ["latin"] });
 import { Orbitron, Outfit } from "next/font/google";
 import { SocialIcon } from "react-social-icons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 export default function ContactUs(){
@@ -44,15 +44,15 @@ export default function ContactUs(){
     }).then((res) => { 
       console.log('Response received')  
         console.log('Response succeeded!')
-        useEffect(()=> {
-          setSubmitted(true)
-          setPhone('')
-          setName('')
-          setSurname('')
-          setEmail('')
-          setMessage('') 
-        })
-       
+        event.preventDefault(); 
+        if (res.status === 200) {
+        setSubmitted(true)
+        setPhone('')
+        setName('')
+        setSurname('')
+        setEmail('')
+        setMessage('') 
+        }
     })
   }
 
