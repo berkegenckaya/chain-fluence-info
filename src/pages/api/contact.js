@@ -9,18 +9,21 @@ export default function (req, res) {
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-      user: "demo@demo.gmail",
-      pass: "password",
+      user: "contact@chainfluence.agency",
+      pass: PASSWORD,
     },
     secure: true,
   });
 
   const mailData = {
     from: 'demo@demo.com',
-    to: 'your email',
+    to: 'contact@chainfluence.agency',
     subject: `Message From ${req.body.name}`,
     text: req.body.message,
-    html: <div>{req.body.message}</div>
+    html: `<div>${req.body.message}</div>
+    <p>Name & Surname:${req.body.name} ${req.body.surname}</p>
+    <p>Telephone No:${req.body.phone}</p>
+    <p>Mail :${req.body.email}</p>`,
    }
 
    transporter.sendMail(mailData, function (err, info) {
@@ -31,4 +34,5 @@ export default function (req, res) {
   })
   console.log(req.body);
   res.status(200)
+  
 }

@@ -8,6 +8,11 @@ import Solutions from "@/containers/Solutions";
 import AboutUs from "@/containers/AboutUs";
 import Tweets from "@/components/Tweet";
 import ContactUs from "@/containers/ContactUs";
+import binance from "../../public/assets/binancegrey.png";
+import cb from "../../public/assets/coinbasegrey.png";
+import bitget from "../../public/assets/bitgetgrey.png";
+import crypto from "../../public/assets/cryptocomgrey.png";
+import pantera from "../../public/assets/panteragrey.png";
 
 
 const orb = Orbitron({ weight: "600", subsets: ["latin"] });
@@ -35,7 +40,13 @@ export default function Home() {
               ></Image>
               <div className="text-white w-full h-48 items-center justify-center md:text-lg text-base lg:p-12 pt-[70px] text-[20px] capitalize leading-10">
                 <div className={outfit.className}>
-                In a world evolving at warp speed, traditional marketing strategies fall short. That's where we step in – combining our expertise in marketing with a deep understanding of Web3, we bridge the gap between your brand and the decentralized landscape. From blockchain startups to established crypto projects, Bucks is your compass, guiding you through uncharted territory with confidence.
+                  In a world evolving at warp speed, traditional marketing
+                  strategies fall short. That's where we step in – combining our
+                  expertise in marketing with a deep understanding of Web3, we
+                  bridge the gap between your brand and the decentralized
+                  landscape. From blockchain startups to established crypto
+                  projects, Bucks is your compass, guiding you through uncharted
+                  territory with confidence.
                 </div>
               </div>
             </div>
@@ -49,18 +60,45 @@ export default function Home() {
           </div>
         </div>
         <div>
-        <div className="w-screen h-36 bg-black md:mt-0 mt-32 z-10"></div>
-        <Image
-                src={doodle}
-                
-                className="mt-[-60px] z-0 absolute right-[10%]"
-              ></Image></div>
+          <div className="w-screen gap-8 h-36 lg:px-48 items-center justify-between p-8 bg-black md:mt-0 flex mt-32 z-10">
+          <Image
+            src={binance}
+            
+            className="max-h-[50px] max-w-[150px] object-fit"
+          ></Image>
+          <Image
+            src={cb}
+            className="max-h-[50px] max-w-[150px] object-fit"
+            
+          ></Image>
+          <Image
+            src={crypto}
+            className="max-h-[50px] sm:flex hidden max-w-[150px] object-fit"
+            
+          ></Image>
+          <Image
+            src={bitget}
+            className="max-h-[50px] md:flex hidden max-w-[150px] object-fit"
+        
+          ></Image>
+         <Image
+            src={pantera}
+            className="max-h-[50px] lg:flex hidden max-w-[150px] object-fit"
+        
+          ></Image>
+          </div>
+          <Image
+            src={doodle}
+            className="mt-[-60px] z-0 absolute right-[10%]"
+           
+          ></Image>
+        </div>
       </div>
       <OurCases id="#ourcases"></OurCases>
       <Solutions id="#solutions"></Solutions>
       <AboutUs id="#aboutus"></AboutUs>
-     <Tweets></Tweets>
-     <ContactUs></ContactUs>
+      <Tweets></Tweets>
+      <ContactUs></ContactUs>
     </main>
   );
 }

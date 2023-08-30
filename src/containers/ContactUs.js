@@ -76,23 +76,23 @@ export default function ContactUs(){
               name="name"
                 placeholder="First Name"
                 onChange={(e)=>{setName(e.target.value)}}
-                className="w-full bg-white border-2 rounded-md text-white p-4 border-white  border-opacity-20
+                className="w-full bg-white border-2 rounded-md text-black p-4 border-white  border-opacity-20
               "
               ></input>
-              <input name="surname" onChange={(e)=>{setSurname(e.target.value)}} placeholder="Last Name" className="w-full bg-white p-4 border-2 rounded-md text-white  border-white border-opacity-20"></input>
+              <input name="surname" onChange={(e)=>{setSurname(e.target.value)}} placeholder="Last Name" className="w-full bg-white p-4 border-2 rounded-md text-black  border-white border-opacity-20"></input>
             </div>
             <div className="flex gap-8 py-4 h-full">
               <input
               name="phone"
               onChange={(e)=>{setPhone(e.target.value)}}
                 placeholder="Phone Number"
-                className="w-full bg-white border-2 rounded-md text-white p-4 border-white border-opacity-20
+                className="w-full bg-white border-2 rounded-md text-black p-4 border-white border-opacity-20
               "
               ></input>
-              <input name="email" onChange={(e)=>{setEmail(e.target.value)}} placeholder="E-Mail" className="w-full bg-white p-4 border-2 text-white  rounded-md border-white border-opacity-20"></input>
+              <input name="email" onChange={(e)=>{setEmail(e.target.value)}} placeholder="E-Mail" className="w-full bg-white p-4 border-2 text-black  rounded-md border-white border-opacity-20"></input>
             </div>
             <div className="flex gap-8 py-4 h-full">
-             <textarea name="message" onChange={(e)=>{setMessage(e.target.value)}} placeholder="How can we help you?" className="w-full bg-white border-2 rounded-md text-white p-4 border-white border-opacity-20"></textarea>
+             <textarea name="message" onChange={(e)=>{setMessage(e.target.value)}} placeholder="How can we help you?" className="w-full bg-white border-2 rounded-md text-black p-4 border-white border-opacity-20"></textarea>
             </div>
             <div className="flex gap-8 py-4 h-full">
                 <div onClick={(e)=>{handleSubmit(e)}} className="w-full py-3 px-5 bg-[#6D0BBA] hover:bg-black cursor-pointer flex justify-center text-white rounded-xl" >
