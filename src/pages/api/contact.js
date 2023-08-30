@@ -7,6 +7,7 @@ export default function (req, res) {
   let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
     port: 465,
+    
     host: "smtp.gmail.com",
     auth: {
       user: "contact@chainfluence.agency",
