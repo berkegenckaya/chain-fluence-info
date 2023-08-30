@@ -7,7 +7,7 @@ const orb4 = Orbitron({ weight: "400", subsets: ["latin"] });
 const outfit = Outfit({ weight: "600", subsets: ["latin"] });
 import { Orbitron, Outfit } from "next/font/google";
 import { SocialIcon } from "react-social-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function ContactUs(){
@@ -42,16 +42,17 @@ export default function ContactUs(){
       body: JSON.stringify(data)
     
     }).then((res) => { 
-      console.log('Response received')
-     
+      console.log('Response received')  
         console.log('Response succeeded!')
-        setSubmitted(true)
-        setName('')
-        setSurname('')
-        setEmail('')
-        setMessage('')
-      
-      
+        useEffect(()=> {
+          setSubmitted(true)
+          setPhone('')
+          setName('')
+          setSurname('')
+          setEmail('')
+          setMessage('') 
+        })
+       
     })
   }
 
@@ -87,12 +88,14 @@ export default function ContactUs(){
             <div className="flex gap-8 py-4 h-full">
               <input
               name="phone"
+              
+              type="tel"
               onChange={(e)=>{setPhone(e.target.value)}}
                 placeholder="Phone Number"
                 className="w-full bg-white border-2 rounded-md text-black p-4 border-white border-opacity-20
               "
               ></input>
-              <input name="email" onChange={(e)=>{setEmail(e.target.value)}} placeholder="E-Mail" className="w-full bg-white p-4 border-2 text-black  rounded-md border-white border-opacity-20"></input>
+              <input type="email" name="email" onChange={(e)=>{setEmail(e.target.value)}} placeholder="E-Mail" className="w-full bg-white p-4 border-2 text-black  rounded-md border-white border-opacity-20"></input>
             </div>
             <div className="flex gap-8 py-4 h-full">
              <textarea name="message" onChange={(e)=>{setMessage(e.target.value)}} placeholder="How can we help you?" className="w-full bg-white border-2 rounded-md text-black p-4 border-white border-opacity-20"></textarea>
