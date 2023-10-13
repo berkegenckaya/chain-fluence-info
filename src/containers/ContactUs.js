@@ -24,6 +24,7 @@ export default function ContactUs(){
 
   const handleSubmit = (e) => { 
     e.preventDefault()
+    
     console.log('Sending')
   let data = {
       name,
@@ -43,8 +44,9 @@ export default function ContactUs(){
     
     }).then((res) => { 
       console.log('Response received')  
+      
         console.log('Response succeeded!')
-        event.preventDefault(); 
+       
         if (res.status === 200) {
         setSubmitted(true)
         setPhone('')
@@ -102,7 +104,7 @@ export default function ContactUs(){
             </div>
             <div className="flex gap-8 py-4 h-full">
                 <div onClick={(e)=>{handleSubmit(e)}} className="w-full py-3 px-5 bg-[#6D0BBA] hover:bg-black cursor-pointer flex justify-center text-white rounded-xl" >
-                   <div>Send Messages</div>
+                   <div>{submitted ? "Done!" : "Send Messages"}</div>
                 </div>
             </div>
           </div>

@@ -78,9 +78,10 @@ export default function Navbar() {
                 <li className="text-white text-base font-medium capitalize leading-relaxed">
                   <div
                     className="cursor-pointer"
-                    onClick={() => goToSection("#ourcases")}
+                    
                   >
-                    Our Cases
+                    <Link href="/sales">Upcoming Sales</Link>
+                    
 
                   </div>
                 </li>
@@ -89,7 +90,7 @@ export default function Navbar() {
                     className="cursor-pointer"
                     onClick={() => goToSection("#solutions")}
                   >
-                    Solutions
+                    Claim
                   </div>
                 </li>
                

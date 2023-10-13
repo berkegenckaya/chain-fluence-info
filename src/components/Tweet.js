@@ -42,9 +42,9 @@ const Tweets = () => {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mb-12">
         <div className="text-[44px] flex flex-col pt-12 leading-normal text-center text-white">
-        <div className={orb.className}>Our Beloved Clients</div>
+        <div className={orb.className}>Our Beloved Partners</div>
        
       </div>
       <div className="relative w-full overflow-hidden">

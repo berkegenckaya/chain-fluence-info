@@ -5,7 +5,7 @@ const outfit6 = Outfit({ weight: "600", subsets: ["latin"] });
 import tri from "../../public/assets/triangles.png";
 
 import Image from "next/image";
-import canvas from "../../public/assets/canvas.png";
+import canvas from "../../public/assets/column.png";
 import char from "../../public/assets/char.png";
 
 import { Orbitron, Outfit } from "next/font/google";
@@ -24,25 +24,26 @@ export default function Solutions({id}) {
           </div>
         </div>
         <div  className="w-screen flex pt-24 md:flex-row flex-col gap-8 px-12 justify-center">
-          <div className="justify-center md:justify-start md:pl-16">
-            <Image src={canvas}></Image>
+          <div className="justify-center md:justify-start z-10 md:pl-16">
+            <Image  src={canvas}></Image>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Solution
-              title="Influencer Marketing"
+              title="Launchpads"
               icon="/assets/inf.png"
+              sub="Access x101 launchpads "
             ></Solution>
-            <Solution title="Paid Ads" icon="/assets/ad.png"></Solution>
+            <Solution title="Staking" icon="/assets/public.png" sub="Stake your tokens to earn more and supoort ecosystem"></Solution>
             <Solution
-              title="Public Relation"
+              title="Soon..."
               icon="/assets/public.png"
             ></Solution>
             <Solution
-              title="Community Management"
+              title="Soon..."
               icon="/assets/com.png"
             ></Solution>
             <Solution
-              title="Social Media Management"
+              title="Soon..."
               icon="/assets/soc.png"
             ></Solution>
             <div className="bg-[#9E00FF] flex flex-col rounded-md border border-[#393939] justify-between px-8 items-center">
